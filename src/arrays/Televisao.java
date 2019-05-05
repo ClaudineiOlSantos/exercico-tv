@@ -22,10 +22,10 @@ public class Televisao {
 
     }
 
-    public String ligaDesliga() {
+    public boolean ligaDesliga() {
         this.ligado = (this.ligado == false ? true : false);
 
-        return (this.ligado ? "ligada" : "desligada");
+        return this.ligado;
     }
 
     public int aumentaVolume() throws Exception {

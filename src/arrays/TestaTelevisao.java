@@ -44,7 +44,12 @@ public class TestaTelevisao {
             try {
                 switch (resposta) {
                     case 1://Liga ou desliga TV
-                        System.out.println("A TV está: " + tv.ligaDesliga());
+
+                        if (tv.ligaDesliga()) {
+                            System.out.println("A TV está ligada e você está assistindo: " + tv.getCanalAtual());
+                        } else {
+                            System.out.println("A TV está desligada...");
+                        }
                         break;
                     case 2://Diminue Volume
                         System.out.println("Volume: " + tv.diminueVolume());
